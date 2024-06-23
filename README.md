@@ -14,20 +14,17 @@
   <img src="https://img.shields.io/badge/Languages-English%20%26%20Sinhala-orange" />
 </p>
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>
-<img align="left" src="https://github.com/I-am-vishalmaurya/I-am-vishalmaurya/blob/main/cropped_image.png" alt="Unfortunately I didn't find the author of the pic, feel to open a pull request if found" width="320" />
+<img align="left" src="https://github.com/VinuthSriArampath/VinuthSriArampath/blob/main/cropped_image.png" alt="Unfortunately I didn't find the author of the pic, feel to open a pull request if found" width="320" />
 <hr>
 
 ```
-I-am-vishalmaurya@github
+I-am-Vinu
 -------------------------
 💻 I am a self taught Full Stack Developer.
-📝 I have a strong interest in Data Science and Artificial Intelligence
-🔭 Working on Deep Learning & Machine Learning
-🌱 Learning about Computer Vision and Machine Learning stuff
-🌟 Main languages: Python, JavaScript
-🚩 Interested in Full Stack Machine Learning Application development
-💖 In a complicated relationship with Neural Networks
-🎵 Love metal, lofi, jazz and soft music
+📝 I have a strong interest in Software Development,Gaming and YT Streaming
+🌟 Main languages: java Script
+💖 Single Life is Better
+🎵 Phonk Music 
 ```
 <hr>
 
