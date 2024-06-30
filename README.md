@@ -31,10 +31,10 @@ I-am-Vinu
 
 ### Here's my github README stats:
 
-![Vinuth Sri Arampath GitHub stats](https://github-readme-stats.vercel.app/api?username=VinuthSriArampath&show_icons=true&theme=radical) 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=VinuthSriArampath&theme=radical)](https://git.io/streak-stats) 
+![Vinuth Sri Arampath GitHub stats](https://github-readme-stats.vercel.app/api?username=VinuthSriArampath&show_icons=true&theme=great-gatsby) 
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=VinuthSriArampath&theme=great-gatsby)](https://git.io/streak-stats) 
 [![trophy](https://github-profile-trophy.vercel.app/?username=VinuthSriArampath&theme=darkhub)](https://github.com/ryo-ma/github-profile-trophy)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=VinuthSriArampath&theme=algolia)](https://github.com/VinuthSriArampath/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=VinuthSriArampath&theme=great-gatsby)](https://github.com/VinuthSriArampath/github-readme-stats)
 
 
 ![GitHub](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)&nbsp;
