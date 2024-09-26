@@ -22,7 +22,7 @@ I-am-Vinu
 -------------------------
 💻 I am a self taught Full Stack Developer.
 📝 I have a strong interest in Software Development,Gaming and YT Streaming
-🌟 Main languages: java Script
+🌟 Main languages: Sinhala,English
 💖 Single Life is Better
 🎵 Phonk Music 
 ```
