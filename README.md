@@ -28,8 +28,7 @@ I-am-Vinu
 ```
 <hr>
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>
-
-### Here's my github README stats:
+<h3 align="center">Here's my github README stats:</h3>
 
 ![Vinuth Sri Arampath GitHub stats](https://github-readme-stats.vercel.app/api?username=VinuthSriArampath&show_icons=true&theme=great-gatsby) 
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=VinuthSriArampath&theme=great-gatsby)](https://git.io/streak-stats) 
