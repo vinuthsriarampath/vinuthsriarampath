@@ -29,11 +29,31 @@ I-am-Vinu
 <hr>
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>
 <h3 align="center">Here's my github README stats:</h3>
-
+<!--
 ![Vinuth Sri Arampath GitHub stats](https://github-readme-stats.vercel.app/api?username=VinuthSriArampath&show_icons=true&theme=great-gatsby) 
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=VinuthSriArampath&theme=great-gatsby)](https://git.io/streak-stats) 
 [![trophy](https://github-profile-trophy.vercel.app/?username=VinuthSriArampath&theme=darkhub)](https://github.com/ryo-ma/github-profile-trophy)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=VinuthSriArampath&theme=great-gatsby)](https://github.com/VinuthSriArampath/github-readme-stats)
+-->
+<p align="center">
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img alt="VinuthSriArampath's Github Stats" src="https://github-readme-stats.vercel.app/api?username=VinuthSriArampath&show_icons=true&theme=great-gatsby" height="192px"/>
+  </a>
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img alt="VinuthSriArampath's Github Streak" src="https://github-readme-streak-stats.herokuapp.com/?user=VinuthSriArampath&theme=great-gatsby" height="192px"/>
+  </a>
+</p>
+<p align="center">
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img alt="VinuthSriArampath's Github Trophies" src="https://github-profile-trophy.vercel.app/?username=VinuthSriArampath&theme=darkhub" height="192px"/>
+  </a>
+</p>
+<p align="center">
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    <img alt="VinuthSriArampath's Github Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=VinuthSriArampath&theme=great-gatsby" height="192px"/>
+  </a>
+</p>
+
 
 
 ![GitHub](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)&nbsp;
