@@ -40,7 +40,7 @@ I-am-Vinu
     <img alt="VinuthSriArampath's Github Stats" src="https://github-readme-stats.vercel.app/api?username=VinuthSriArampath&show_icons=true&theme=great-gatsby" height="192px"/>
   </a>
   <a href="https://github.com/anuraghazra/github-readme-stats">
-    
+    <img alt="VinuthSriArampath's Github Streak" src="https://github-readme-streak-stats.herokuapp.com/?user=VinuthSriArampath&theme=great-gatsby" height="192px"/>
   </a>
 </p>
 <p align="center">
