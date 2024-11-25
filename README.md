@@ -73,7 +73,7 @@ I-am-Vinu
 
 ### ☁️ &nbsp;Cloud Computing
 
-[![My Skills](https://skillicons.dev/icons?i=aws&theme=dark)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=aws,netlify&theme=dark)](https://skillicons.dev)
 
 ### 🧰 &nbsp;Version Controlls
 
