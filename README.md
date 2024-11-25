@@ -28,63 +28,65 @@ I-am-Vinu
 ```
 <hr>
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>
+
 <h3 align="center">Here's my github README stats:</h3>
-<!--
-![Vinuth Sri Arampath GitHub stats](https://github-readme-stats.vercel.app/api?username=VinuthSriArampath&show_icons=true&theme=great-gatsby) 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=VinuthSriArampath&theme=great-gatsby)](https://git.io/streak-stats) 
-[![trophy](https://github-profile-trophy.vercel.app/?username=VinuthSriArampath&theme=darkhub)](https://github.com/ryo-ma/github-profile-trophy)
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=VinuthSriArampath&theme=great-gatsby)](https://github.com/VinuthSriArampath/github-readme-stats)
--->
+
 <p align="center">
+  
   <a href="https://github.com/anuraghazra/github-readme-stats">
     <img alt="VinuthSriArampath's Github Stats" src="https://github-readme-stats.vercel.app/api?username=VinuthSriArampath&show_icons=true&theme=great-gatsby" height="192px"/>
   </a>
+  
   <a href="https://github.com/anuraghazra/github-readme-stats">
     <img alt="VinuthSriArampath's Github Streak" src="https://github-readme-streak-stats.herokuapp.com/?user=VinuthSriArampath&theme=great-gatsby" height="192px"/>
   </a>
+  
 </p>
+
 <p align="center">
   <a href="https://github.com/anuraghazra/github-readme-stats">
     <img alt="VinuthSriArampath's Github Trophies" src="https://github-profile-trophy.vercel.app/?username=VinuthSriArampath&theme=darkhub" height="192px"/>
   </a>
 </p>
+
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>
+
 <p align="center">
   <a href="https://github.com/anuraghazra/github-readme-stats">
     <img alt="VinuthSriArampath's Github Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=VinuthSriArampath&theme=great-gatsby" height="192px"/>
   </a>
 </p>
 
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>
 
+### 🏮 &nbsp;Languages 
 
-![GitHub](https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github)&nbsp;
-![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-05122A?style=flat&logo=visual-studio-code&logoColor=007ACC)&nbsp;
-![Java](https://img.shields.io/badge/-Java-05122A?style=flat&logo=Java&logoColor=FFA518)&nbsp;
-![Bootstrap](https://img.shields.io/badge/-Bootstrap-05122A?style=flat&logo=bootstrap&logoColor=563D7C)\
-![HTML](https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5)&nbsp;
-![CSS](https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=1572B6)&nbsp;
-![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)&nbsp;
-![Node.js](https://img.shields.io/badge/-Node.js-05122A?style=flat&logo=node.js)&nbsp;
-<!--
-![Python](https://img.shields.io/badge/-Python-05122A?style=flat&logo=python)&nbsp;
+[![My Skills](https://skillicons.dev/icons?i=python,java,html,css,js,bootstrap,dart&theme=dark)](https://skillicons.dev)
 
+### 🎆 &nbsp;Frameworks 
 
-![C](https://img.shields.io/badge/-C-05122A?style=flat&logo=C&logoColor=A8B9CC)&nbsp;
-![C++](https://img.shields.io/badge/-C++-05122A?style=flat&logo=C%2B%2B&logoColor=00599C)&nbsp;
-![R (Statistics)](https://img.shields.io/badge/-R-05122A?style=flat&logo=R&logoColor=276DC3)\
-![React](https://img.shields.io/badge/-React-05122A?style=flat&logo=react)&nbsp;
-![Django](https://img.shields.io/badge/-Django-05122A?style=flat&logo=django&logoColor=092E20)&nbsp;
-![Flask](https://img.shields.io/badge/-Flask-05122A?style=flat&logo=flask)&nbsp;
+[![My Skills](https://skillicons.dev/icons?i=spring,nodejs,angular,react,expressjs,flutter&theme=dark)](https://skillicons.dev)
 
+### 🗃 &nbsp;Databases
 
-![Git](https://img.shields.io/badge/-Git-05122A?style=flat&logo=git)&nbsp;
+[![My Skills](https://skillicons.dev/icons?i=mysql,hibernate&theme=dark)](https://skillicons.dev)
 
-![Markdown](https://img.shields.io/badge/-Markdown-05122A?style=flat&logo=markdown)\
+### ☁️ &nbsp;Cloud Computing
 
-![RStudio](https://img.shields.io/badge/-RStudio-05122A?style=flat&logo=rstudio)&nbsp;
-![Eclipse](https://img.shields.io/badge/-Eclipse-05122A?style=flat&logo=eclipse-ide&logoColor=2C2255)\
-![Illustrator](https://img.shields.io/badge/-Illustrator-05122A?style=flat&logo=adobe-illustrator)&nbsp;
-![Photoshop](https://img.shields.io/badge/-Photoshop-05122A?style=flat&logo=adobe-photoshop)&nbsp;
-![InDesign](https://img.shields.io/badge/-InDesign-05122A?style=flat&logo=adobe-indesign)-->
+[![My Skills](https://skillicons.dev/icons?i=aws&theme=dark)](https://skillicons.dev)
+
+### 🧰 &nbsp;Version Controlls
+
+[![My Skills](https://skillicons.dev/icons?i=git,github,githubactions&theme=dark)](https://skillicons.dev)
+
+### 🛠 &nbsp;Developing Tools 
+
+[![My Skills](https://skillicons.dev/icons?i=idea,vscode,visualstudio,androidstudio,postman&theme=dark)](https://skillicons.dev)
+
+### 🖌️ &nbsp;Designing Tools 
+
+[![My Skills](https://skillicons.dev/icons?i=figma,photoshop,react,expressjs,flutter&theme=dark)](https://skillicons.dev)
+
 
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>
 
@@ -99,4 +101,4 @@ I-am-Vinu
 
 </p>
 
-
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>
