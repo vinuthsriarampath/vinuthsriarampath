@@ -52,9 +52,9 @@ I-am-Vinu
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>
 
 <p align="center">
-  <a href="https://github.com/anuraghazra/github-readme-stats">
-    <img alt="VinuthSriArampath's Github Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=VinuthSriArampath&theme=great-gatsby" height="192px"/>
-  </a>
+  <p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=VinuthSriArampath&langs_count=10&show_icons=true&locale=en&layout=compact&theme=great-gatsby" alt="VinuthSriArampath" height="192px"/>
+</p>
 </p>
 
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>
