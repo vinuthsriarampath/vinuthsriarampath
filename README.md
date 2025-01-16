@@ -61,11 +61,11 @@ I-am-Vinu
 
 ### 🏮 &nbsp;Languages 
 
-[![My Skills](https://skillicons.dev/icons?i=python,java,html,css,js,bootstrap,dart&theme=dark)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=python,java,html,css,js,dart&theme=dark)](https://skillicons.dev)
 
 ### 🎆 &nbsp;Frameworks 
 
-[![My Skills](https://skillicons.dev/icons?i=spring,nodejs,angular,react,expressjs,flutter,laravel,electron&theme=dark)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=spring,nodejs,angular,react,expressjs,flutter,laravel,electron,bootstrap,tailwind&theme=dark)](https://skillicons.dev)
 
 ### 🗃 &nbsp;Databases
 
