@@ -65,7 +65,7 @@ I-am-Vinu
 
 ### 🎆 &nbsp;Frameworks 
 
-[![My Skills](https://skillicons.dev/icons?i=spring,nodejs,angular,react,expressjs,flutter,laravel,electron,bootstrap,tailwind&theme=dark)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=spring,nodejs,angular,react,nextjs,expressjs,flutter,laravel,electron,bootstrap,tailwind&theme=dark)](https://skillicons.dev)
 
 ### 🗃 &nbsp;Databases
 
