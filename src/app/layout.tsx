@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Vinuth Sri Arampath - Software Developer & Full Stack Engineer',
+    title: 'Vinuth Sri Arampath - Full Stack Developer',
     description: 'A showcase of Vinuth Sri Arampath\'s projects, skills, and experience in software development, featuring innovative solutions, clean code, and a passion for building impactful digital products.',
     images: ['/og-image.jpg'],
     creator: '@vinuthsriarampath',
