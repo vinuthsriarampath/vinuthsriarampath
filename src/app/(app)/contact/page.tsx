@@ -27,7 +27,7 @@ export default function ContactPage() {
                         <button className="rounded-full w-15 h-15 flex justify-center items-center bg-lime-500 font-semibold text-black hover:bg-lime-400 transition-all duration-300 cursor-pointer">
                             <Phone className="size-8" />
                         </button>
-                        <p className="text-xl">+1 (234) 567-890</p>
+                        <p className="text-xl">+94 71 940 1853</p>
                     </a>
                 </div>
                 <div className="flex gap-4 mt-5">
