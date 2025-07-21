@@ -9,6 +9,7 @@ import SubSection from "@/app/components/shared/sub-section";
 import LatestProjectSection from "@/app/components/app/home/latest-project-section";
 import ExperienceSection from "@/app/components/app/home/experience-section";
 import SkillSection from "@/app/components/app/home/skills-section";
+import StorySection from "@/app/components/app/about/story-section";
 
 export default function HomePage() {
   
@@ -19,6 +20,7 @@ export default function HomePage() {
         <HeroSection/>
       </MainSection>
       <SubSection>
+        <StorySection/>
         <LatestProjectSection/>
         <ExperienceSection/>
         <SkillSection/>
