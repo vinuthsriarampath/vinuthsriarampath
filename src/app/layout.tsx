@@ -90,6 +90,9 @@ export const metadata: Metadata = {
     'msapplication-TileColor': '#10b981',
     'msapplication-tap-highlight': 'no',
   },
+  icons: {
+    icon: '/logo.ico',
+  },
 };
 
 export default function RootLayout({
