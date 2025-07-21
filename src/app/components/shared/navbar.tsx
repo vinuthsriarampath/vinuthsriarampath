@@ -3,9 +3,11 @@
 import { useState } from "react";
 import { Facebook, Github, Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const pathname = usePathname();
     return (
         <nav className="backdrop-blur-sm ">
             <div className="mx-auto px-5">
@@ -32,18 +34,18 @@ export default function NavBar() {
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="flex space-x-4">
 
-                                <Link href={"/home"} className="hover:underline hover:decoration-lime-500 bg-gradient-to-r hover:from-lime-400 hover:via-emerald-500 hover:to-lime-600 hover:bg-clip-text hover:text-transparent font-bold decoration-2 decoration">Home</Link>
-                                <Link href={"/projects"} className="hover:underline hover:decoration-lime-500 bg-gradient-to-r hover:from-lime-400 hover:via-emerald-500 hover:to-lime-600 hover:bg-clip-text hover:text-transparent font-bold decoration-2 decoration">Projects</Link>
-                                <Link href={"/about"} className="hover:underline hover:decoration-lime-500 bg-gradient-to-r hover:from-lime-400 hover:via-emerald-500 hover:to-lime-600 hover:bg-clip-text hover:text-transparent font-bold decoration-2 decoration">About</Link>
-                                <Link href={"/contact"} className="hover:underline hover:decoration-lime-500 bg-gradient-to-r hover:from-lime-400 hover:via-emerald-500 hover:to-lime-600 hover:bg-clip-text hover:text-transparent font-bold decoration-2 decoration">Contact</Link>
+                                <Link href={"/home"} className={`${pathname === "/home" ? "bg-gradient-to-r from-lime-400 via-emerald-500 to-lime-600 bg-clip-text text-transparent font-bold decoration-2 decoration" : "hover:underline hover:decoration-lime-500 bg-gradient-to-r hover:from-lime-400 hover:via-emerald-500 hover:to-lime-600 hover:bg-clip-text hover:text-transparent font-bold decoration-2 decoration"}`}>Home</Link>
+                                <Link href={"/projects"} className={`${pathname === "/projects" ? "bg-gradient-to-r from-lime-400 via-emerald-500 to-lime-600 bg-clip-text text-transparent font-bold decoration-2 decoration" : "hover:underline hover:decoration-lime-500 bg-gradient-to-r hover:from-lime-400 hover:via-emerald-500 hover:to-lime-600 hover:bg-clip-text hover:text-transparent font-bold decoration-2 decoration"}`}>Projects</Link>
+                                <Link href={"/about"} className={`${pathname === "/about" ? "bg-gradient-to-r from-lime-400 via-emerald-500 to-lime-600 bg-clip-text text-transparent font-bold decoration-2 decoration" : "hover:underline hover:decoration-lime-500 bg-gradient-to-r hover:from-lime-400 hover:via-emerald-500 hover:to-lime-600 hover:bg-clip-text hover:text-transparent font-bold decoration-2 decoration"}`}>About</Link>
+                                <Link href={"/contact"} className={`${pathname === "/contact" ? "bg-gradient-to-r from-lime-400 via-emerald-500 to-lime-600 bg-clip-text text-transparent font-bold decoration-2 decoration" : "hover:underline hover:decoration-lime-500 bg-gradient-to-r hover:from-lime-400 hover:via-emerald-500 hover:to-lime-600 hover:bg-clip-text hover:text-transparent font-bold decoration-2 decoration"}`}>Contact</Link>
                             </div>
                         </div>
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="flex space-x-4">
                                 <a href="https://www.linkedin.com/in/vinuth-sri-arampath" className="hover:underline"><Linkedin className="size-5" /></a>
                                 <a href="https://www.github.com/vinuthsriarampath" className="hover:underline"><Github className="size-5" /></a>
-                                <a href="#" className="hover:underline"><Facebook className="size-5" /></a>
-                                <a href="#" className="hover:underline"><Instagram className="size-5" /></a>
+                                <a href="https://www.facebook.com/vinuth.arampath.984/" className="hover:underline"><Facebook className="size-5" /></a>
+                                <a href="https://www.instagram.com/vinuth_arampath/" className="hover:underline"><Instagram className="size-5" /></a>
                             </div>
                         </div>
                     </div>
@@ -51,15 +53,14 @@ export default function NavBar() {
                 </div>
             </div>
 
-            {/* Mobile menu, show/hide based on menu state. */}
+            {/* Mobile menu */}
             {isMenuOpen && (
                 <div id="mobile-menu" className="sm:hidden">
                     <div className="space-y-1 px-2 pt-2 pb-3">
-                        {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                        <Link href={"/home"} aria-current="page" className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">Home</Link>
-                        <Link href={"/projects"} className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</Link>
-                        <Link href={"/about"} className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</Link>
-                        <Link href={"/contact"} className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</Link>
+                        <Link href={"/home"} aria-current="page" className={`${pathname === "/home"?"block rounded-md bg-lime-700 px-3 py-2 text-base font-medium text-white" : "block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white" }`}>Home</Link>
+                        <Link href={"/projects"} className={`${pathname === "/projects"?"block rounded-md bg-lime-700 px-3 py-2 text-base font-medium text-white" : "block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white" }`}>Projects</Link>
+                        <Link href={"/about"} className={`${pathname === "/about"?"block rounded-md bg-lime-700 px-3 py-2 text-base font-medium text-white" : "block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white" }`}>About</Link>
+                        <Link href={"/contact"} className={`${pathname === "/contact"?"block rounded-md bg-lime-700 px-3 py-2 text-base font-medium text-white" : "block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white" }`}>Contact</Link>
                     </div>
                 </div>
             )}
