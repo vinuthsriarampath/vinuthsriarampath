@@ -34,7 +34,6 @@ export const metadata: Metadata = {
   applicationName: "Vinuth Sri Arampath Portfolio",
   category: "portfolio",
   classification: "Personal Portfolio",
-  viewport: 'width=device-width, initial-scale=1',
   robots: {
     index: true,
     follow: true,
@@ -93,6 +92,11 @@ export const metadata: Metadata = {
   icons: {
     icon: '/logo.ico',
   },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({
