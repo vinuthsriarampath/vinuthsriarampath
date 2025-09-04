@@ -5,4 +5,5 @@ export interface Project {
     description?: string;
     language?: string;
     thumbnail?: string;
+    status?: 'in-progress' | 'completed'
 }
