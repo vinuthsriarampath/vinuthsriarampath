@@ -5,6 +5,7 @@ import SubSection from "@/app/components/shared/sub-section";
 import {useEffect, useState} from "react";
 import axios, {AxiosResponse} from "axios";
 import {Project} from "@/types/Project";
+import ProjectCardSkeleton from "@/app/components/app/skeletons/project-card-skeleton";
 
 export default function ProjectsPage() {
     const [projects, setProjects] = useState<Project[]>([]);
@@ -39,9 +40,11 @@ export default function ProjectsPage() {
             <h1 className="font-bold text-4xl md:text-7xl">All <span className="bg-gradient-to-r from-lime-400 via-emerald-500 to-lime-600 bg-clip-text text-transparent">Projects.</span></h1>
             <div className="grid grid-cols-1 justify-center items-center md:grid-cols-3 lg:grid-cols-4 gap-4 md-10 md:mb-20">
                 {loading && (
-                    <div className="col-span-4 text-center">
-                        <p className="text-lg">Loading projects...</p>
-                    </div>
+                    <>
+                        {Array.from({ length: 12 }).map((_, idx) => (
+                            <ProjectCardSkeleton key={idx} />
+                        ))}
+                    </>
                 )}
                 {projects.map((project:any) => (
                     <ProjectCard
