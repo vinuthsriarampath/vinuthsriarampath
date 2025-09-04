@@ -8,7 +8,7 @@ interface ProjectCardProps {
     repoUrl: string;
 }
 
-export default function ProjectCard({ thumbnail, name, description, hostUrl, repoUrl }: ProjectCardProps) {
+export default function ProjectCard({ thumbnail, name, description, hostUrl, repoUrl }: Readonly<ProjectCardProps>) {
     return (
         <div className="w-full h-full p-4 flex flex-col justify-between space-y-4 rounded-xl bg-gradient-to-br from-black/20 to-lime-500/30 backdrop-blur-lg">
             <div className="w-full h-36 overflow-hidden rounded-md flex justify-center items-center bg-black/20">
@@ -28,11 +28,11 @@ export default function ProjectCard({ thumbnail, name, description, hostUrl, rep
             </p>
 
             <div className="flex justify-around pt-2">
-                <a href="#"><button className=" outline-1 outline-lime-400 p-2 rounded-full hover:shadow-lime-400/50"><Eye className="size-5" /></button></a>
+                <a href="#"><button className=" outline-1 outline-lime-400 p-2 rounded-full hover:shadow-lime-400/50 cursor-pointer"><Eye className="size-5" /></button></a>
                 {hostUrl && (
-                    <a href={hostUrl}><button className=" outline-1 outline-lime-400 p-2 rounded-full hover:shadow-lime-400/50"><Globe className="size-5" /></button></a>
+                    <a href={hostUrl}><button className=" outline-1 outline-lime-400 p-2 rounded-full hover:shadow-lime-400/50 cursor-pointer"><Globe className="size-5" /></button></a>
                 )}
-                <a href={repoUrl}><button className="outline-1 outline-lime-400 p-2 rounded-full hover:shadow-lime-400/50"><GitBranch className="size-5" /></button></a>
+                <a href={repoUrl} target={"_blank"}><button className="outline-1 outline-lime-400 p-2 rounded-full hover:shadow-lime-400/50 cursor-pointer"><GitBranch className="size-5" /></button></a>
             </div>
         </div>
     )
