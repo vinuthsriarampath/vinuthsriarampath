@@ -1,8 +1,20 @@
+'use client';
+
 import MainSection from "@/app/components/shared/main-section";
 import { Github, Facebook, Instagram, Mail, Phone, Linkedin } from "lucide-react";
 import Image from "next/image";
+import {useEffect, useState} from "react";
+import {User} from "@/types/User";
 
 export default function ContactPage() {
+    const [user,setUser]= useState<User>({} as User)
+
+    useEffect(() => {
+        const storedUser = sessionStorage.getItem("user");
+        if (storedUser) {
+            setUser(JSON.parse(storedUser));
+        }
+    }, []);
     return (
         <MainSection>
             <div className="col-span-1 flex flex-col justify-center items-center md:items-start gap-4 order-2 md:order-none space-y-1">
@@ -16,17 +28,17 @@ export default function ContactPage() {
                     I'm available to work together, Don't hesitate to reach me out
                 </p>
                 <div className="flex flex-col sm:flex-row md:flex-col gap-4">
-                    <a href="mailto:vinuthsriarampath@outlook.com" className="flex flex-row items-center gap-4 cursor-pointer hover:drop-shadow-[0_0_10px_#a3e635]">
+                    <a href={`mailto:${user.email}`} className="flex flex-row items-center gap-4 cursor-pointer hover:drop-shadow-[0_0_10px_#a3e635]">
                         <button className="rounded-full w-10 h-10 md:w-15 md:h-15 aspect-square flex justify-center items-center bg-lime-500 font-semibold text-black hover:bg-lime-400 transition-all duration-300 cursor-pointer">
                             <Mail className="size-4 md:size-8" />
                         </button>
-                        <p className="text-sm sm:text-md md:text-xl">vinuthsriarampath@outlook.com</p>
+                        <p className="text-sm sm:text-md md:text-xl">{user.email}</p>
                     </a>
-                    <a href="tel:+1234567890" className="flex flex-row items-center gap-4 hover:drop-shadow-[0_0_10px_#a3e635]">
+                    <a href={`tel:${user.contact}`} className="flex flex-row items-center gap-4 hover:drop-shadow-[0_0_10px_#a3e635]">
                         <button className="rounded-full w-10 h-10 md:w-15 md:h-15 aspect-square flex justify-center items-center bg-lime-500 font-semibold text-black hover:bg-lime-400 transition-all duration-300 cursor-pointer">
                             <Phone className="size-4 md:size-8" />
                         </button>
-                        <p className="text-sm sm:text-md md:text-xl">+94 71 940 1853</p>
+                        <p className="text-sm sm:text-md md:text-xl">{user.contact}</p>
                     </a>
                 </div>
                 <div className="flex gap-4 mt-0 md:mt-5 mb-5">
@@ -55,7 +67,7 @@ export default function ContactPage() {
             </div>
             <div className="col-span-1 flex justify-center md:justify-end items-center order-1 md:order-none mt-3 md:mt-0">
                 <div className="relative w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 aspect-square drop-shadow-[0_0_12px_#fff035]">
-                    <Image src="https://nycuybywyqgqnlwictzm.supabase.co/storage/v1/object/public/avatars/1752738899881.jpeg" alt="Profile Picture" fill className="object-cover rounded-full border-4 border-dashed border-lime-300 p-2 md:p-4" sizes="100vw" />
+                    <Image src={ user.avatar && user.avatar !== "" ? user.avatar : "/boru.png" } alt="Profile Picture" fill className="object-cover rounded-full border-4 border-dashed border-lime-300 p-2 md:p-4" sizes="100vw" />
                 </div>
             </div>
         </MainSection>
