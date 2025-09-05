@@ -1,6 +1,16 @@
 import Image from "next/image";
+import {useEffect, useState} from "react";
+import {User} from "@/types/User";
 
 export default function HeroSection() {
+    const [user,setUser]= useState<User>({} as User)
+
+    useEffect(() => {
+        const storedUser = sessionStorage.getItem("user");
+        if (storedUser) {
+            setUser(JSON.parse(storedUser));
+        }
+    }, []);
   return (
     <>
       {/* intro */}
@@ -31,7 +41,7 @@ export default function HeroSection() {
       {/* image section */}
       <div className="col-span-1 flex justify-center md:justify-end items-center order-1 md:order-none">
         <div className="relative w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 aspect-square drop-shadow-[0_0_12px_#fff035]">
-          <Image src="https://nycuybywyqgqnlwictzm.supabase.co/storage/v1/object/public/avatars/1752738899881.jpeg" alt="Profile Picture" fill className="object-cover rounded-full border-4 border-dashed border-lime-300 p-2 md:p-4" sizes="100vw" />
+          <Image src={ user.avatar && user.avatar !== "" ? user.avatar : "/boru.png" } alt="Profile Picture" fill className="object-cover rounded-full border-4 border-dashed border-lime-300 p-2 md:p-4" sizes="100vw" />
         </div>
       </div>
     </>
