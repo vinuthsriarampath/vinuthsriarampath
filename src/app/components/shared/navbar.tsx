@@ -1,13 +1,66 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Facebook, Github, Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Social } from "@/types/Socials";
+import { Platform } from "@/types/enums/Platform";
 
 export default function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const pathname = usePathname();
+
+    const [socials, setSocials] = useState({
+        linkedin: '',
+        github: '',
+        facebook: '',
+        instagram: ''
+    });
+
+    useEffect(() => {
+        getSocialsFromSession();
+    }, []); 
+
+    const getSocialsFromSession = () => {
+        const user = sessionStorage.getItem('user');
+        if (!user) {
+            alert("User not found in session!");
+            return;
+        }
+
+        try {
+            const parsedUser = JSON.parse(user);
+            if (!parsedUser.socials || parsedUser.socials.length === 0) {
+                alert("No social accounts linked to this user!");
+                return;
+            }
+
+            const socialMap = parsedUser.socials.reduce((acc: Record<string, string>, social: Social) => {
+                switch (social.platform) {
+                    case Platform.LINKEDIN:
+                        acc.linkedin = social.url;
+                        break;
+                    case Platform.GITHUB:
+                        acc.github = social.url;
+                        break;
+                    case Platform.FACEBOOK:
+                        acc.facebook = social.url;
+                        break;
+                    case Platform.INSTAGRAM:
+                        acc.instagram = social.url;
+                        break;
+                }
+                return acc;
+            }, {});
+
+            setSocials(socialMap);
+        } catch (error) {
+            console.error("Error parsing user data:", error);
+            alert("Error loading user data!");
+        }
+    }
+
     return (
         <nav className="backdrop-blur-sm ">
             <div className="mx-auto px-5">
@@ -33,7 +86,6 @@ export default function NavBar() {
                         </a>
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="flex space-x-4">
-
                                 <Link href={"/home"} className={`${pathname === "/home" ? "bg-gradient-to-r from-lime-400 via-emerald-500 to-lime-600 bg-clip-text text-transparent font-bold decoration-2 decoration" : "hover:underline hover:decoration-lime-500 bg-gradient-to-r hover:from-lime-400 hover:via-emerald-500 hover:to-lime-600 hover:bg-clip-text hover:text-transparent font-bold decoration-2 decoration"}`}>Home</Link>
                                 <Link href={"/projects"} className={`${pathname === "/projects" ? "bg-gradient-to-r from-lime-400 via-emerald-500 to-lime-600 bg-clip-text text-transparent font-bold decoration-2 decoration" : "hover:underline hover:decoration-lime-500 bg-gradient-to-r hover:from-lime-400 hover:via-emerald-500 hover:to-lime-600 hover:bg-clip-text hover:text-transparent font-bold decoration-2 decoration"}`}>Projects</Link>
                                 <Link href={"/about"} className={`${pathname === "/about" ? "bg-gradient-to-r from-lime-400 via-emerald-500 to-lime-600 bg-clip-text text-transparent font-bold decoration-2 decoration" : "hover:underline hover:decoration-lime-500 bg-gradient-to-r hover:from-lime-400 hover:via-emerald-500 hover:to-lime-600 hover:bg-clip-text hover:text-transparent font-bold decoration-2 decoration"}`}>About</Link>
@@ -42,14 +94,27 @@ export default function NavBar() {
                         </div>
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="flex space-x-4">
-                                <a href="https://www.linkedin.com/in/vinuth-sri-arampath" className="hover:underline"><Linkedin className="size-5" /></a>
-                                <a href="https://www.github.com/vinuthsriarampath" className="hover:underline"><Github className="size-5" /></a>
-                                <a href="https://www.facebook.com/vinuth.arampath.984/" className="hover:underline"><Facebook className="size-5" /></a>
-                                <a href="https://www.instagram.com/vinuth_arampath/" className="hover:underline"><Instagram className="size-5" /></a>
+                                {[
+                                    { key: 'linkedin', url: socials.linkedin, icon: Linkedin },
+                                    { key: 'github', url: socials.github, icon: Github },
+                                    { key: 'facebook', url: socials.facebook, icon: Facebook },
+                                    { key: 'instagram', url: socials.instagram, icon: Instagram }
+                                ].filter(social => social.url).map(social => {
+                                    const IconComponent = social.icon;
+                                    return (
+                                        <a
+                                            key={social.key}
+                                            href={social.url}
+                                            target="_blank"
+                                            className="hover:underline"
+                                        >
+                                            <IconComponent className="size-5" />
+                                        </a>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -57,10 +122,10 @@ export default function NavBar() {
             {isMenuOpen && (
                 <div id="mobile-menu" className="sm:hidden">
                     <div className="space-y-1 px-2 pt-2 pb-3">
-                        <Link href={"/home"} aria-current="page" className={`${pathname === "/home"?"block rounded-md bg-lime-700 px-3 py-2 text-base font-medium text-white" : "block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white" }`}>Home</Link>
-                        <Link href={"/projects"} className={`${pathname === "/projects"?"block rounded-md bg-lime-700 px-3 py-2 text-base font-medium text-white" : "block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white" }`}>Projects</Link>
-                        <Link href={"/about"} className={`${pathname === "/about"?"block rounded-md bg-lime-700 px-3 py-2 text-base font-medium text-white" : "block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white" }`}>About</Link>
-                        <Link href={"/contact"} className={`${pathname === "/contact"?"block rounded-md bg-lime-700 px-3 py-2 text-base font-medium text-white" : "block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white" }`}>Contact</Link>
+                        <Link href={"/home"} aria-current="page" className={`${pathname === "/home" ? "block rounded-md bg-lime-700 px-3 py-2 text-base font-medium text-white" : "block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"}`}>Home</Link>
+                        <Link href={"/projects"} className={`${pathname === "/projects" ? "block rounded-md bg-lime-700 px-3 py-2 text-base font-medium text-white" : "block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"}`}>Projects</Link>
+                        <Link href={"/about"} className={`${pathname === "/about" ? "block rounded-md bg-lime-700 px-3 py-2 text-base font-medium text-white" : "block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"}`}>About</Link>
+                        <Link href={"/contact"} className={`${pathname === "/contact" ? "block rounded-md bg-lime-700 px-3 py-2 text-base font-medium text-white" : "block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"}`}>Contact</Link>
                     </div>
                 </div>
             )}

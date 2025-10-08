@@ -3,18 +3,63 @@
 import MainSection from "@/app/components/shared/main-section";
 import { Github, Facebook, Instagram, Mail, Phone, Linkedin } from "lucide-react";
 import Image from "next/image";
-import {useEffect, useState} from "react";
-import {User} from "@/types/User";
+import { useEffect, useState } from "react";
+import { User } from "@/types/User";
+import { Platform } from "@/types/enums/Platform";
+import { Social } from "@/types/Socials";
 
 export default function ContactPage() {
-    const [user,setUser]= useState<User>({} as User)
+    const [user, setUser] = useState<User>({} as User)
+    const [socials, setSocials] = useState({
+        linkedin: '',
+        github: '',
+        facebook: '',
+        instagram: ''
+    });
 
     useEffect(() => {
-        const storedUser = sessionStorage.getItem("user");
-        if (storedUser) {
-            setUser(JSON.parse(storedUser));
-        }
+        getSocialsFromSession();
     }, []);
+
+    const getSocialsFromSession = () => {
+        const user = sessionStorage.getItem('user');
+        if (!user) {
+            alert("User not found in session!");
+            return;
+        }
+
+        try {
+            const parsedUser = JSON.parse(user);
+            setUser(parsedUser);
+            if (!parsedUser.socials || parsedUser.socials.length === 0) {
+                alert("No social accounts linked to this user!");
+                return;
+            }
+
+            const socialMap = parsedUser.socials.reduce((acc: Record<string, string>, social: Social) => {
+                switch (social.platform) {
+                    case Platform.LINKEDIN:
+                        acc.linkedin = social.url;
+                        break;
+                    case Platform.GITHUB:
+                        acc.github = social.url;
+                        break;
+                    case Platform.FACEBOOK:
+                        acc.facebook = social.url;
+                        break;
+                    case Platform.INSTAGRAM:
+                        acc.instagram = social.url;
+                        break;
+                }
+                return acc;
+            }, {});
+
+            setSocials(socialMap);
+        } catch (error) {
+            console.error("Error parsing user data:", error);
+            alert("Error loading user data!");
+        }
+    }
     return (
         <MainSection>
             <div className="col-span-1 flex flex-col justify-center items-center md:items-start gap-4 order-2 md:order-none space-y-1">
@@ -42,32 +87,31 @@ export default function ContactPage() {
                     </a>
                 </div>
                 <div className="flex gap-4 mt-0 md:mt-5 mb-5">
-                    <a href="https://www.linkedin.com/in/vinuth-sri-arampath" className="hover:underline">
-                        <button className="rounded-full w-8 h-8 md:w-10 md:h-10 aspect-square flex justify-center items-center outline-2 outline-lime-500 font-semibold cursor-pointer hover:bg-lime-400 transition-all duration-300 hover:drop-shadow-[0_0_10px_#a3e635] text-white hover:text-black">
-                            <Linkedin className="size-4 md:size-6" />
-                        </button>
-                    </a>
-                    <a href="https://www.github.com/vinuthsriarampath" className="hover:underline">
-                        <button className="rounded-full w-8 h-8 md:w-10 md:h-10 aspect-square flex justify-center items-center outline-2 outline-lime-500 font-semibold cursor-pointer hover:bg-lime-400 transition-all duration-300 hover:drop-shadow-[0_0_10px_#a3e635] text-white hover:text-black">
-                            <Github className="size-4 md:size-6" />
-                        </button>
-                    </a>
-                    <a href="#" className="hover:underline">
-                        <button className="rounded-full w-8 h-8 md:w-10 md:h-10 aspect-square flex justify-center items-center outline-2 outline-lime-500 font-semibold cursor-pointer hover:bg-lime-400 transition-all duration-300 hover:drop-shadow-[0_0_10px_#a3e635] text-white hover:text-black">
-                            <Facebook className="size-4 md:size-6" />
-                        </button>
-
-                    </a>
-                    <a href="#" className="hover:underline">
-                        <button className="rounded-full w-8 h-8 md:w-10 md:h-10 aspect-square flex justify-center items-center outline-2 outline-lime-500 font-semibold cursor-pointer hover:bg-lime-400 transition-all duration-300 hover:drop-shadow-[0_0_10px_#a3e635] text-white hover:text-black">
-                            <Instagram className="size-4 md:size-6" />
-                        </button>
-                    </a>
+                    {[
+                        { key: 'linkedin', url: socials.linkedin, icon: Linkedin },
+                        { key: 'github', url: socials.github, icon: Github },
+                        { key: 'facebook', url: socials.facebook, icon: Facebook },
+                        { key: 'instagram', url: socials.instagram, icon: Instagram }
+                    ].filter(social => social.url).map(social => {
+                        const IconComponent = social.icon;
+                        return (
+                            <a
+                                key={social.key}
+                                href={social.url}
+                                target="_blank"
+                                className="hover:underline"
+                            >
+                                <button className="rounded-full w-8 h-8 md:w-10 md:h-10 aspect-square flex justify-center items-center outline-2 outline-lime-500 font-semibold cursor-pointer hover:bg-lime-400 transition-all duration-300 hover:drop-shadow-[0_0_10px_#a3e635] text-white hover:text-black">
+                                    <IconComponent className="size-4 md:size-6" />
+                                </button>
+                            </a>
+                        );
+                    })}
                 </div>
             </div>
             <div className="col-span-1 flex justify-center md:justify-end items-center order-1 md:order-none mt-3 md:mt-0">
                 <div className="relative w-48 h-48 md:w-72 md:h-72 lg:w-96 lg:h-96 aspect-square drop-shadow-[0_0_12px_#fff035]">
-                    <Image src={ user.avatar && user.avatar !== "" ? user.avatar : "/boru.png" } alt="Profile Picture" fill className="object-cover rounded-full border-4 border-dashed border-lime-300 p-2 md:p-4" sizes="100vw" />
+                    <Image src={user.avatar && user.avatar !== "" ? user.avatar : "/boru.png"} alt="Profile Picture" fill className="object-cover rounded-full border-4 border-dashed border-lime-300 p-2 md:p-4" sizes="100vw" />
                 </div>
             </div>
         </MainSection>
