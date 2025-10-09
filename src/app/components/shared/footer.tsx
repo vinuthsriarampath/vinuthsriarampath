@@ -1,6 +1,7 @@
 "use client";
 
 import { Platform } from "@/types/enums/Platform";
+import { Social } from "@/types/Socials";
 import { Facebook, Github, Instagram, Linkedin } from "lucide-react";
 import { useEffect, useState } from "react";
 
