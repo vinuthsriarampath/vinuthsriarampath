@@ -15,99 +15,33 @@
 </p>
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>
 
-<!-- Hide this section on mobile devices -->
-<style>
-@media (max-width: 600px) {
-  .desktop-only {
-    display: none !important;
-  }
-}
-</style>
-<div class="desktop-only" align="center">
-  <table border="0" style="border:none;">
-    <tr style="border:none;">
-      <td width="50%" style="border:none;">
-      <!-- do not give align text with pre tag -->
-        <pre >  
-I-am-Vinu
--------------------------
-💻 I am a self taught Full Stack Developer.
-📝 I have a strong interest in Software Development, Gaming and Streaming
-🌟 Main languages: Sinhala, English
-💖 Single Life is Better
-🎵 Phonk Music
-        </pre>
-      </td>
-      <td width="50%" align="center" style="border:none;">
-        <img src="public/logo.ico" alt="Unfortunately I didn't find the author of the pic, feel to open a pull request if found" width="320" />
-      </td>
-    </tr>
-  </table>
-</div>
-<!-- Mobile only section -->
-<style>
-@media (min-width: 601px) {
-  .mobile-only {
-    display: none !important;
-  }
-}
-</style>
-<div class="mobile-only">
-  <table border="0" style="border:none;">
-    <tr>
-      <td align="center" style="border:none;">
-        <img src="public/logo.ico" alt="Unfortunately I didn't find the author of the pic, feel to open a pull request if found" width="320" />
-      </td>
-    </tr>
-    <tr>
-      <td style="border:none;" align="left">
-      <!-- do not give align text with pre tag -->
-        <pre >
-I-am-Vinu
--------------------------
-💻 I am a self taught Full Stack Developer.
-📝 I have a strong interest in Software Development, Gaming and Streaming
-🌟 Main languages: Sinhala, English
-💖 Single Life is Better
-🎵 Phonk Music
-        </pre>
-      </td>
-    </tr>
-  </table>
-</div>
+<img align="right" src="public\logo.ico" alt="Unfortunately I didn't find the author of the pic, feel to open a pull request if found"  />
+<hr>
 
+```
+I-am-Vinu
+-------------------------
+💻 I am a self taught Full Stack Developer.
+📝 I have a strong interest in Software Development,Gaming and YT Streaming
+🌟 Main languages: Sinhala,English
+💖 Single Life is Better
+🎵 Phonk Music 
+```
+<hr>
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"></a>
 
 <h3 align="center">Here's my github README stats:</h3>
+<p align="center">
 
-<!-- Responsive stats section -->
-<style>
-  .stats-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-  @media (max-width: 600px) {
-    .stats-container {
-      flex-direction: column;
-      align-items: center;
-      gap: 0;
-    }
-    .stats-container a {
-      margin-bottom: 12px;
-    }
-  }
-</style>
-<div class="stats-container" align="center">
   <a href="https://github.com/anuraghazra/github-readme-stats">
     <img alt="VinuthSriArampath's Github Stats" src="https://github-readme-stats.vercel.app/api?username=VinuthSriArampath&show_icons=true&theme=great-gatsby" height="192px"/>
   </a>
+
   <a href="https://github.com/anuraghazra/github-readme-stats">
     <img alt="VinuthSriArampath's Github Streak" src="https://github-readme-streak-stats.herokuapp.com/?user=VinuthSriArampath&theme=great-gatsby" height="192px"/>
   </a>
-</div>
+
+</p>
 
 <p align="center">
   <a href="https://github.com/anuraghazra/github-readme-stats">
